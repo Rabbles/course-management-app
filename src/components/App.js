@@ -1,9 +1,9 @@
 import React from "react";
-import {Routes} from "react-router-dom";
-import {Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import AboutPage from "./about/AboutPage"
 import HomePage from "./home/HomePage";
 import Header from "../common/Header";
+import PageNotFound from "./PageNotFound";
 
 function App() {
     return (
@@ -12,8 +12,8 @@ function App() {
             <Routes>
                 <Route exact path="/" element={<HomePage/>} />
                 <Route path="/about" element={<AboutPage/>} />
+                <Route path="*" element={<PageNotFound/>} />
             </Routes>
-
         </div>
     )
 }
